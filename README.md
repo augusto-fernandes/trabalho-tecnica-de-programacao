@@ -2,7 +2,7 @@
 
 ## Alunos
 - Augusto Fernandes 
-- Gabriel Silva
+- Gabriel Santos
 - Gabriel Tavares
 - Guilherme henrique
 - Felipe Quadrado
