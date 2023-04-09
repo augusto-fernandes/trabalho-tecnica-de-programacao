@@ -4,14 +4,12 @@ public class Posto {
 
     private String nome;
     private  String localizacao;
+    private String cnpj;
 
     private Posto[] postos = new Posto[10];
     int totalPostos = 0;
 
-    public Posto(String nome, String localizacao) {
-        this.nome = nome;
-        this.localizacao = localizacao;
-    }
+    
 
     public void adicionarPosto(Posto novoPosto){
         if(totalPostos <= postos.length){
@@ -55,4 +53,13 @@ public class Posto {
     public void setTotalPostos(int totalPostos) {
         this.totalPostos = totalPostos;
     }
+
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+    
 }
