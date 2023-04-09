@@ -9,7 +9,11 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String mensagemMenu = "DIGITE A OPÇÃO DESEJADA %n1- PARA CADASTRAR UM CLIENTE  %n2 - PARA CADASTRAR POSTO  %n3 - PARA LISTAR TODOS OS CLIENTES  %n4 - PARA BUSCAR CLIENTE PELO NOME %n5 - PARA EXIBIR TODOS OS POSTO %n6 - PARA BUSCAR POSTOS PELO NOME %n0 - PARA SAIR DO MENU";
+		String mensagemMenu =
+				"DIGITE A OPÇÃO DESEJADA: %n1 - PARA CADASTRAR UM CLIENTE  %n2 - PARA CADASTRAR POSTO  " +
+				"%n3 - PARA LISTAR TODOS OS CLIENTES  %n4 - PARA BUSCAR CLIENTE PELO NOME " +
+				"%n5 - PARA EXIBIR TODOS OS POSTO %n6 - PARA BUSCAR POSTOS PELO NOME %n0 - PARA SAIR DO MENU";
+
 		System.out.printf(mensagemMenu);
 		int opcao = sc.nextInt();
 		ClinteDAO cli = new ClinteDAO();

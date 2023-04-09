@@ -11,14 +11,6 @@ public class Cliente {
     private String cpf;
     private String localizacao;
     private Carro carro;
-   
-
-
-
-    public Cliente() {
-    }
-
-    
     	
     public String getNome() {
         return nome;

@@ -3,12 +3,11 @@ package cliente;
 import carro.Carro;
 
 public class ClinteDAO {
-	  Cliente[] lista = new Cliente[10];
-	 int totalClientes;
+    Cliente[] lista = new Cliente[10];
+    int totalClientes;
 
-	public void salvar(String nome, String sobrenome, String cpf, String localizacao, Carro carro) 
-	{
-		Cliente cli = new Cliente();
+    public void salvar(String nome, String sobrenome, String cpf, String localizacao, Carro carro) {
+        Cliente cli = new Cliente();
         cli.setNome(nome);
         cli.setSobrenome(sobrenome);
         cli.setCpf(cpf);
@@ -17,43 +16,35 @@ public class ClinteDAO {
         adicionarCliente(cli);
     }
 
+    public void adicionarCliente(Cliente novoCliente) {
 
-
-
-
-    public void adicionarCliente(Cliente novoCliente){
-       
-    	
-    	if(totalClientes <= lista.length){
+        if (totalClientes < lista.length) {
             lista[totalClientes] = novoCliente;
             totalClientes++;
-        }
-        else{
+        } else {
             System.out.println("Base de dados cheia.");
         }
 
     }
 
-    public String buscarCliente(String nomeCliente){
-        for(int i = 0 ; i < totalClientes; i++){
-            if(lista[i].getNome().equals(nomeCliente)){
-              System.out.println("O cliente pesquisado é " + lista[i].getNome());
+    public String buscarCliente(String nomeCliente) {
+        for (int i = 0; i < totalClientes; i++) {
+            if (lista[i].getNome().equals(nomeCliente)) {
+                System.out.println("O cliente pesquisado é " + lista[i].getNome());
+                return "";
             }
         }
-       return "Esse cliente não existe na nossa base de dados.";
+        System.out.println("Esse cliente não existe na nossa base de dados.");
+        return "";
     }
 
-    public void listarClientes(){
-    	for(int i = 0 ; i < totalClientes; i++)
-    	{
-    	
-    	System.out.println("Nome: "+lista[i].getNome()
-    			+" Sobrenome: "+lista[i].getSobrenome()+
-    			" CPF: "+lista[i].getCpf()+
-    			" Endereço:"+lista[i].getLocalizacao()
-    			);
-    	
-    	
-    	}
-    	}
+    public void listarClientes() {
+        for (int i = 0; i < totalClientes; i++) {
+            System.out.println("Nome: " + lista[i].getNome()
+                    + " Sobrenome: " + lista[i].getSobrenome()
+                    + " CPF: " + lista[i].getCpf()
+                    + " Endereço:" + lista[i].getLocalizacao()
+            );
+        }
+    }
 }
