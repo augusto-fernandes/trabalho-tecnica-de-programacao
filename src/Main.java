@@ -10,9 +10,18 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String mensagemMenu =
-				"DIGITE A OPÇÃO DESEJADA: %n1 - PARA CADASTRAR UM CLIENTE  %n2 - PARA CADASTRAR POSTO  " +
-				"%n3 - PARA LISTAR TODOS OS CLIENTES  %n4 - PARA BUSCAR CLIENTE PELO NOME " +
-				"%n5 - PARA EXIBIR TODOS OS POSTO %n6 - PARA BUSCAR POSTOS PELO NOME %n0 - PARA SAIR DO MENU";
+				"DIGITE A OPÇÃO DESEJADA: " +
+						"%n1 - PARA CADASTRAR UM CLIENTE  " +
+						"%n2 - PARA CADASTRAR POSTO  " +
+						"%n3 - PARA LISTAR TODOS OS CLIENTES" +
+						"%n4 - PARA BUSCAR CLIENTE PELO NOME " +
+						"%n5 - PARA EXIBIR TODOS OS POSTO " +
+						"%n6 - PARA BUSCAR POSTOS PELO NOME" +
+						"%n7 - PARA EDITAR CLIENTES PELO NOME" +
+						"%n8 - PARA EDITAR POSTOS PELO NOME" +
+						"%n9 - PARA EXCLUIR CLIENTES PELO NOME" +
+						"%n10 - PARA EXCLUIR POSTOS PELO NOME"+
+						" %n0 - PARA SAIR DO MENU";
 
 		System.out.printf(mensagemMenu);
 		int opcao = sc.nextInt();
@@ -78,8 +87,32 @@ public class Main {
 				System.out.println("Digite o nome do Posto");
 				String buscaPosto = sc.next();
 				pos.buscarPosto(buscaPosto);
-				break;	
-				
+				break;
+
+			case 7:
+				System.out.println("Pesquisa o cliente para ser editado; ");
+				sc.nextLine();
+				String editNome = sc.nextLine();
+				cli.editarCliente(editNome);
+				break;
+			case 8:
+				System.out.println("Pesquisa o Posto para ser editado; ");
+				sc.nextLine();
+				String editNomePosto = sc.nextLine();
+				pos.editarPosto(editNomePosto);
+				break;
+			case 9:
+				System.out.println("Digite o nome do cliente que deseja deletar: ");
+				sc.nextLine();
+				String deleteCliente = sc.nextLine();
+				cli.excluirCliente(deleteCliente);
+				break;
+			case 10:
+				System.out.println("Digite o nome do Posto que deseja deletar: ");
+				sc.nextLine();
+				String deletePosto = sc.nextLine();
+				cli.excluirCliente(deletePosto);
+				break;
 			default:
 				System.out.println("Opção Invalida!");
 				System.out.printf(mensagemMenu);

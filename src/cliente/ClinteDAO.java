@@ -2,6 +2,8 @@ package cliente;
 
 import carro.Carro;
 
+import java.util.Scanner;
+
 public class ClinteDAO {
     Cliente[] lista = new Cliente[10];
     int totalClientes;
@@ -25,6 +27,35 @@ public class ClinteDAO {
             System.out.println("Base de dados cheia.");
         }
 
+    }
+
+    public String editarCliente(String edit){
+        for (int i = 0; i < totalClientes; i++) {
+            Scanner sc = new Scanner(System.in);
+            if (lista[i].getNome().equals(edit)) {
+                System.out.println("novo nome do cliente: ");
+                String novoNome = sc.nextLine();
+                lista[i].setNome(novoNome);
+                System.out.println("O novo nome do cliente é " + lista[i].getNome());
+                return"";
+            }
+        }
+        System.out.println( "Esse cliente não existe na nossa base de dados.");
+        return "";
+    }
+
+    public void excluirCliente(String delete){
+        for (int i = 0; i < totalClientes; i++) {
+            if (lista[i].getNome().equals(delete)) {
+                lista[i].setCarro(null);
+                lista[i].setCpf(null);
+                lista[i].setNome(null);
+                lista[i].setLocalizacao(null);
+                lista[i].setSobrenome(null);
+                totalClientes --;
+                System.out.println("O cliente foi deletado!");
+            }
+        }
     }
 
     public String buscarCliente(String nomeCliente) {
