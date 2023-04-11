@@ -102,16 +102,10 @@ public class Main {
 				pos.editarPosto(editNomePosto);
 				break;
 			case 9:
-				System.out.println("Digite o nome do cliente que deseja deletar: ");
-				sc.nextLine();
-				String deleteCliente = sc.nextLine();
-				cli.excluirCliente(deleteCliente);
+				cli.excluirCliente();
 				break;
 			case 10:
-				System.out.println("Digite o nome do Posto que deseja deletar: ");
-				sc.nextLine();
-				String deletePosto = sc.nextLine();
-				cli.excluirCliente(deletePosto);
+				pos.excluirPosto();
 				break;
 			default:
 				System.out.println("Opção Invalida!");

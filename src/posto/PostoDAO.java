@@ -27,16 +27,9 @@ public class PostoDAO {
 			System.out.println("Base de dados cheia.");
 		}
 	}
-	public void excluirPosto(String delete) {
-		for (int i = 0; i < totalPostos; i++) {
-			if (listaPosto[i].getNome().equals(delete)) {
-				listaPosto[i].setNome(null);
-				listaPosto[i].setLocalizacao(null);
-				listaPosto[i].setCnpj(null);
-				totalPostos --;
-				System.out.println("O posto foi deletado!");
-			}
-		}
+	public void excluirPosto() {
+		totalPostos --;
+		System.out.println("Um Posto foi excluido");
 	}
 
 	public String editarPosto(String edit){

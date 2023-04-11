@@ -44,18 +44,10 @@ public class ClinteDAO {
         return "";
     }
 
-    public void excluirCliente(String delete){
-        for (int i = 0; i < totalClientes; i++) {
-            if (lista[i].getNome().equals(delete)) {
-                lista[i].setCarro(null);
-                lista[i].setCpf(null);
-                lista[i].setNome(null);
-                lista[i].setLocalizacao(null);
-                lista[i].setSobrenome(null);
-                totalClientes --;
-                System.out.println("O cliente foi deletado!");
-            }
-        }
+    public void excluirCliente(){
+        totalClientes --;
+        System.out.println("Um cliente foi excluido");
+
     }
 
     public String buscarCliente(String nomeCliente) {
