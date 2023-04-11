@@ -19,8 +19,8 @@ public class Main {
 						"%n6 - PARA BUSCAR POSTOS PELO NOME" +
 						"%n7 - PARA EDITAR CLIENTES PELO NOME" +
 						"%n8 - PARA EDITAR POSTOS PELO NOME" +
-						"%n9 - PARA EXCLUIR CLIENTES PELO NOME" +
-						"%n10 - PARA EXCLUIR POSTOS PELO NOME"+
+						"%n9 - PARA EXCLUIR UM CLIENTE" +
+						"%n10 - PARA EXCLUIR UM POSTO "+
 						" %n0 - PARA SAIR DO MENU";
 
 		System.out.printf(mensagemMenu);
